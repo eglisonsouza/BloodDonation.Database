@@ -14,5 +14,18 @@ namespace BloodDonation.Database.Core.Entities
         public RhFactor RhFactor { get; set; }
         public List<Donation> Donations { get; set; }
         public List<Address> Addresses { get; set; }
+
+        public Donator(string name, string email, DateTime birthDate, string gender, double weight, BloodType bloodType, RhFactor rhFactor, List<Donation> donations, List<Address> addresses) : base()
+        {
+            Name = name;
+            Email = email;
+            BirthDate = birthDate;
+            Gender = gender;
+            Weight = weight;
+            BloodType = bloodType;
+            RhFactor = rhFactor;
+            Donations = donations;
+            Addresses = addresses;
+        }
     }
 }
