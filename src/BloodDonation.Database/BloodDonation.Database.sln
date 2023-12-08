@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodDonation.Database.Api", "BloodDonation.Database.Api\BloodDonation.Database.Api.csproj", "{235EAA60-AFAF-4676-BEC9-F63CE3BF2BE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodDonation.Database.Core", "BloodDonation.Database.Core\BloodDonation.Database.Core.csproj", "{C4BF1C1D-9DE0-4D60-9C39-25FD8B38929E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodDonation.Database.Infrastructure", "BloodDonation.Database.Infrastructure\BloodDonation.Database.Infrastructure.csproj", "{CF2D47FD-DFFD-4D67-85A9-1E9B2B6A1BEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{235EAA60-AFAF-4676-BEC9-F63CE3BF2BE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{235EAA60-AFAF-4676-BEC9-F63CE3BF2BE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{235EAA60-AFAF-4676-BEC9-F63CE3BF2BE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{235EAA60-AFAF-4676-BEC9-F63CE3BF2BE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4BF1C1D-9DE0-4D60-9C39-25FD8B38929E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4BF1C1D-9DE0-4D60-9C39-25FD8B38929E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4BF1C1D-9DE0-4D60-9C39-25FD8B38929E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4BF1C1D-9DE0-4D60-9C39-25FD8B38929E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF2D47FD-DFFD-4D67-85A9-1E9B2B6A1BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF2D47FD-DFFD-4D67-85A9-1E9B2B6A1BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF2D47FD-DFFD-4D67-85A9-1E9B2B6A1BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF2D47FD-DFFD-4D67-85A9-1E9B2B6A1BEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {347FF237-E8B5-4254-BE79-93B78CAB324A}
+	EndGlobalSection
+EndGlobal
