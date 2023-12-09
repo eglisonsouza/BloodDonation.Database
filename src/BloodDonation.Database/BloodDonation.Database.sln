@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodDonation.Database.Api", "BloodDonation.Database.Api\BloodDonation.Database.Api.csproj", "{235EAA60-AFAF-4676-BEC9-F63CE3BF2BE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BloodDonation.Database.Api", "BloodDonation.Database.Api\BloodDonation.Database.Api.csproj", "{235EAA60-AFAF-4676-BEC9-F63CE3BF2BE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodDonation.Database.Core", "BloodDonation.Database.Core\BloodDonation.Database.Core.csproj", "{C4BF1C1D-9DE0-4D60-9C39-25FD8B38929E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BloodDonation.Database.Core", "BloodDonation.Database.Core\BloodDonation.Database.Core.csproj", "{C4BF1C1D-9DE0-4D60-9C39-25FD8B38929E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodDonation.Database.Infrastructure", "BloodDonation.Database.Infrastructure\BloodDonation.Database.Infrastructure.csproj", "{CF2D47FD-DFFD-4D67-85A9-1E9B2B6A1BEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BloodDonation.Database.Infrastructure", "BloodDonation.Database.Infrastructure\BloodDonation.Database.Infrastructure.csproj", "{CF2D47FD-DFFD-4D67-85A9-1E9B2B6A1BEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodDonation.Database.Application", "BloodDonation.Database.Application\BloodDonation.Database.Application.csproj", "{30BEC7C9-8D11-4291-9DEE-74F814E2597B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{CF2D47FD-DFFD-4D67-85A9-1E9B2B6A1BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF2D47FD-DFFD-4D67-85A9-1E9B2B6A1BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF2D47FD-DFFD-4D67-85A9-1E9B2B6A1BEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BEC7C9-8D11-4291-9DEE-74F814E2597B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BEC7C9-8D11-4291-9DEE-74F814E2597B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BEC7C9-8D11-4291-9DEE-74F814E2597B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BEC7C9-8D11-4291-9DEE-74F814E2597B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

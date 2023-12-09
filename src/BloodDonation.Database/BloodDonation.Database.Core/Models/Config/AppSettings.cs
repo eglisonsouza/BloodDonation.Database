@@ -2,8 +2,15 @@
 {
     public class AppSettings
     {
+        public const string Position = "Settings";
         public ConnectionStrings? ConnectionStrings { get; set; }
         public RabbitMqSettings? RabbitMq { get; set; }
+        public ExternalServices? ExternalServices { get; set; }
+    }
+
+    public class ExternalServices
+    {
+        public string? ViaCep { get; set; }
     }
 
     public class RabbitMqSettings
