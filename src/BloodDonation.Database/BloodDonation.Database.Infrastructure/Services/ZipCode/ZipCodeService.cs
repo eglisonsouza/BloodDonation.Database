@@ -4,16 +4,10 @@ using BloodDonation.Database.Core.Services;
 
 namespace BloodDonation.Database.Infrastructure.Services.ZipCode
 {
-    public class ZipCodeService : IZipCodeSerivice
+    public class ZipCodeService(IHttpGetHandler httpHandler, AppSettings appSettings) : IZipCodeService
     {
-        private readonly IHttpGetHandler _httpHandler;
-        private readonly string UrlZipCodeServiceExternal;
-
-        public ZipCodeService(IHttpGetHandler httpHandler, AppSettings appSettings)
-        {
-            _httpHandler = httpHandler;
-            UrlZipCodeServiceExternal = appSettings.ExternalServices?.ViaCep!;
-        }
+        private readonly IHttpGetHandler _httpHandler = httpHandler;
+        private readonly string UrlZipCodeServiceExternal = appSettings.ExternalServices?.ViaCep!;
 
         public async Task<ZipCodeDto> GetByZipCodeAsync(string zipCode)
         {

@@ -2,7 +2,7 @@
 
 namespace BloodDonation.Database.Core.Services
 {
-    public interface IZipCodeSerivice
+    public interface IZipCodeService
     {
         Task<ZipCodeDto> GetByZipCodeAsync(string zipCode);
     }

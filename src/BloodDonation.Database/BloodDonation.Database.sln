@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BloodDonation.Database.Core
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BloodDonation.Database.Infrastructure", "BloodDonation.Database.Infrastructure\BloodDonation.Database.Infrastructure.csproj", "{CF2D47FD-DFFD-4D67-85A9-1E9B2B6A1BEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodDonation.Database.Application", "BloodDonation.Database.Application\BloodDonation.Database.Application.csproj", "{30BEC7C9-8D11-4291-9DEE-74F814E2597B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BloodDonation.Database.Application", "BloodDonation.Database.Application\BloodDonation.Database.Application.csproj", "{30BEC7C9-8D11-4291-9DEE-74F814E2597B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodDonation.Database.UnitTest", "BloodDonation.Database.UnitTest\BloodDonation.Database.UnitTest.csproj", "{E0CA928C-2223-4CD3-A546-D4971CFC6791}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{30BEC7C9-8D11-4291-9DEE-74F814E2597B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30BEC7C9-8D11-4291-9DEE-74F814E2597B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30BEC7C9-8D11-4291-9DEE-74F814E2597B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0CA928C-2223-4CD3-A546-D4971CFC6791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0CA928C-2223-4CD3-A546-D4971CFC6791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0CA928C-2223-4CD3-A546-D4971CFC6791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0CA928C-2223-4CD3-A546-D4971CFC6791}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

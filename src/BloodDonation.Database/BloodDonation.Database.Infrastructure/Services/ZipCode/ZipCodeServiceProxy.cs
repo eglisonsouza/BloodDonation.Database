@@ -3,9 +3,9 @@ using BloodDonation.Database.Core.Services;
 
 namespace BloodDonation.Database.Infrastructure.Services.ZipCode
 {
-    public class ZipCodeServiceProxy(IZipCodeSerivice zipCodeService, ICache cache) : IZipCodeSeriviceProxy
+    public class ZipCodeServiceProxy(IZipCodeService zipCodeService, ICache cache) : IZipCodeServiceProxy
     {
-        private readonly IZipCodeSerivice _zipCodeService = zipCodeService;
+        private readonly IZipCodeService _zipCodeService = zipCodeService;
         private readonly ICache _cache = cache;
 
         public async Task<ZipCodeDto> GetByZipCodeAsync(string zipCode)

@@ -1,9 +1,11 @@
 ﻿using BloodDonation.Database.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BloodDonation.Database.Infrastructure.Persistence.Configuration.SqlServer.EntitiesConfiguration
 {
+    [ExcludeFromCodeCoverage]
     public class AddressConfiguration : BaseConfiguration<Address>, IEntityTypeConfiguration<Address>
     {
         public new void Configure(EntityTypeBuilder<Address> builder)

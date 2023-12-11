@@ -2,9 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BloodDonation.Database.Infrastructure.Extensions
 {
+    [ExcludeFromCodeCoverage]
     public static class DatabaseExtensions
     {
         public static IServiceCollection AddContextSqlServer(this IServiceCollection services, IConfiguration configuration)

@@ -6,9 +6,9 @@ namespace BloodDonation.Database.Application.Query.ZipCodeEvent.FindByZipCode
 {
     public class FindByZipCodeHandler : IRequestHandler<FindByZipCodeQuery, ZipCodeViewModel>
     {
-        private readonly IZipCodeSeriviceProxy _zipCodeService;
+        private readonly IZipCodeServiceProxy _zipCodeService;
 
-        public FindByZipCodeHandler(IZipCodeSeriviceProxy zipCodeService)
+        public FindByZipCodeHandler(IZipCodeServiceProxy zipCodeService)
         {
             _zipCodeService = zipCodeService;
         }
