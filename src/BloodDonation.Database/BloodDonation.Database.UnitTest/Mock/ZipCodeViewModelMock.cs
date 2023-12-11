@@ -1,4 +1,4 @@
-﻿using BloodDonation.Database.Application.ViewModels;
+﻿using BloodDonation.Database.Application.Query.ZipCodeEvent.Models;
 
 namespace BloodDonation.Database.UnitTest.Mock
 {

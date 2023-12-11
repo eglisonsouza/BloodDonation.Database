@@ -1,17 +1,12 @@
-﻿using BloodDonation.Database.Application.ViewModels;
+﻿using BloodDonation.Database.Application.Query.ZipCodeEvent.Models;
 using BloodDonation.Database.Core.Common.Events;
 using BloodDonation.Database.Core.Services;
 
 namespace BloodDonation.Database.Application.Query.ZipCodeEvent.FindByZipCode
 {
-    public class FindByZipCodeHandler : IRequestHandler<FindByZipCodeQuery, ZipCodeViewModel>
+    public class FindByZipCodeHandler(IZipCodeServiceProxy zipCodeService) : IRequestHandler<FindByZipCodeQuery, ZipCodeViewModel>
     {
-        private readonly IZipCodeServiceProxy _zipCodeService;
-
-        public FindByZipCodeHandler(IZipCodeServiceProxy zipCodeService)
-        {
-            _zipCodeService = zipCodeService;
-        }
+        private readonly IZipCodeServiceProxy _zipCodeService = zipCodeService;
 
         public async Task<ZipCodeViewModel> Handle(FindByZipCodeQuery request)
         {
