@@ -10,6 +10,7 @@ builder.Services.AddServiceCollection();
 builder.Services.AddQueries();
 builder.Services.AddControllers();
 builder.Services.AddContextSqlServer(builder.Configuration);
+builder.Services.AddRepositories();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

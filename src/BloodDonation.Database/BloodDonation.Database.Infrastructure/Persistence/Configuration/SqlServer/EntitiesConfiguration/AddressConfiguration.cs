@@ -35,6 +35,10 @@ namespace BloodDonation.Database.Infrastructure.Persistence.Configuration.SqlSer
                 .Property(p => p.DonatorId)
                 .IsRequired();
             builder
+                .Property(p => p.Zone)
+                .IsRequired();
+
+            builder
                 .HasOne(p => p.Donator)
                 .WithMany(p => p.Addresses)
                 .HasForeignKey(p => p.DonatorId)

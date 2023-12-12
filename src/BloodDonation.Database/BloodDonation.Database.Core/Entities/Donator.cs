@@ -12,10 +12,10 @@ namespace BloodDonation.Database.Core.Entities
         public double Weight { get; set; }
         public BloodType BloodType { get; set; }
         public RhFactor RhFactor { get; set; }
-        public List<Donation> Donations { get; set; }
-        public List<Address> Addresses { get; set; }
+        public List<Donation>? Donations { get; set; }
+        public List<Address>? Addresses { get; set; }
 
-        public Donator(string name, string email, DateTime birthDate, string gender, double weight, BloodType bloodType, RhFactor rhFactor, List<Donation> donations, List<Address> addresses) : base()
+        public Donator(string name, string email, DateTime birthDate, string gender, double weight, BloodType bloodType, RhFactor rhFactor) : base()
         {
             Name = name;
             Email = email;
@@ -24,8 +24,10 @@ namespace BloodDonation.Database.Core.Entities
             Weight = weight;
             BloodType = bloodType;
             RhFactor = rhFactor;
-            Donations = donations;
-            Addresses = addresses;
+        }
+
+        public Donator()
+        {
         }
     }
 }

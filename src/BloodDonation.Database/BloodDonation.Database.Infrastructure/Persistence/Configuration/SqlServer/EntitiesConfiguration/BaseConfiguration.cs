@@ -16,6 +16,7 @@ namespace BloodDonation.Database.Infrastructure.Persistence.Configuration.SqlSer
             builder
                 .Property(p => p.CreatedAt)
                 .IsRequired();
+
             builder
                 .Property(p => p.UpdatedAt);
         }

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BloodDonation.Database.Core.Entities;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
 
 namespace BloodDonation.Database.Infrastructure.Persistence.Configuration.SqlServer
@@ -6,6 +7,11 @@ namespace BloodDonation.Database.Infrastructure.Persistence.Configuration.SqlSer
     [ExcludeFromCodeCoverage]
     public class SqlServerDbContext(DbContextOptions<SqlServerDbContext> options) : DbContext(options)
     {
+        public DbSet<Donator> Donator { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Donation> Donations { get; set; }
+        public DbSet<BloodStock> BloodStocks { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

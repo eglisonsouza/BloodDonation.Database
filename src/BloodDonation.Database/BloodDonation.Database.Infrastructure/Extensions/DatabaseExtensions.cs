@@ -1,4 +1,8 @@
-﻿using BloodDonation.Database.Infrastructure.Persistence.Configuration.SqlServer;
+﻿using BloodDonation.Database.Core.Repositories;
+using BloodDonation.Database.Core.Repositories.Base;
+using BloodDonation.Database.Infrastructure.Persistence.Configuration.SqlServer;
+using BloodDonation.Database.Infrastructure.Persistence.Repositories;
+using BloodDonation.Database.Infrastructure.Persistence.Repositories.Base;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +18,15 @@ namespace BloodDonation.Database.Infrastructure.Extensions
             services.AddDbContext<SqlServerDbContext>(options =>
                 options.UseSqlServer(configuration.GetSection("Settings").GetConnectionString("SqlServerConnection"),
                 b => b.MigrationsAssembly(typeof(SqlServerDbContext).Assembly.FullName)));
+
+            return services;
+        }
+
+        public static IServiceCollection AddRepositories(this IServiceCollection services)
+        {
+
+            services.AddScoped(typeof(IAddRepository<>), typeof(AddRepository<>));
+            services.AddScoped<IDonatorRepository, DonatorRepository>();
 
             return services;
         }

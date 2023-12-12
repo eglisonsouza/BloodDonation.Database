@@ -1,6 +1,6 @@
 ﻿using BloodDonation.Database.Core.Models.DTOs;
 
-namespace BloodDonation.Database.Application.Query.ZipCodeEvent.Models
+namespace BloodDonation.Database.Application.Models.ViewModel
 {
     public class ZipCodeViewModel
     {

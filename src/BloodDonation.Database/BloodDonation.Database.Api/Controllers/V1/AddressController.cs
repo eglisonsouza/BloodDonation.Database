@@ -1,5 +1,5 @@
-﻿using BloodDonation.Database.Application.Query.ZipCodeEvent.FindByZipCode;
-using BloodDonation.Database.Application.Query.ZipCodeEvent.Models;
+﻿using BloodDonation.Database.Application.Models.ViewModel;
+using BloodDonation.Database.Application.Query.ZipCodeEvent.FindByZipCode;
 using BloodDonation.Database.Core.Common.Events;
 using Microsoft.AspNetCore.Mvc;
 

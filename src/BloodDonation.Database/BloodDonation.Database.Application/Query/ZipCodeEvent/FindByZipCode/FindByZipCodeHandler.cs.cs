@@ -1,4 +1,4 @@
-﻿using BloodDonation.Database.Application.Query.ZipCodeEvent.Models;
+﻿using BloodDonation.Database.Application.Models.ViewModel;
 using BloodDonation.Database.Core.Common.Events;
 using BloodDonation.Database.Core.Services;
 

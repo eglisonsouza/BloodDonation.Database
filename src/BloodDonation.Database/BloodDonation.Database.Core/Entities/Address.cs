@@ -9,18 +9,8 @@ namespace BloodDonation.Database.Core.Entities
         public string City { get; set; }
         public string State { get; set; }
         public string ZipCode { get; set; }
+        public string Zone { get; set; }
         public Guid DonatorId { get; set; }
-        public Donator Donator { get; set; }
-
-        public Address(string street, string number, string city, string state, string zipCode, Guid donatorId, Donator donator) : base()
-        {
-            Street = street;
-            Number = number;
-            City = city;
-            State = state;
-            ZipCode = zipCode;
-            DonatorId = donatorId;
-            Donator = donator;
-        }
+        public Donator? Donator { get; set; }
     }
 }
