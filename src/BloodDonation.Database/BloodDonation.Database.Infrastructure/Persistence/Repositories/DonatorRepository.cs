@@ -6,16 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BloodDonation.Database.Infrastructure.Persistence.Repositories
 {
-    public class DonatorRepository(IAddRepository<Donator> addRepository, IAddRepository<Address> addAddressRepository, SqlServerDbContext context) : IDonatorRepository
+    public class DonatorRepository(IAddRepository<Donator> addRepository, IGetByIdRepository<Donator> getByIdRepository, SqlServerDbContext context) : IDonatorRepository
     {
         private readonly IAddRepository<Donator> _addRepository = addRepository;
-        private readonly IAddRepository<Address> _addAddressRepository = addAddressRepository;
+        private readonly IGetByIdRepository<Donator> _getByIdRepository = getByIdRepository;
         private readonly SqlServerDbContext _context = context;
-
-        public Task<Address> AddAddressAsync(Address address)
-        {
-            return _addAddressRepository.AddAsync(address);
-        }
 
         public Task<Donator> AddAsync(Donator entity)
         {
@@ -25,6 +20,11 @@ namespace BloodDonation.Database.Infrastructure.Persistence.Repositories
         public Task<bool> EmailIsExist(string email)
         {
             return _context.Donator.AnyAsync(d => d.Email == email);
+        }
+
+        public Task<Donator?>? GetByIdAsync(Guid id)
+        {
+            return _getByIdRepository.GetByIdAsync(id);
         }
     }
 }

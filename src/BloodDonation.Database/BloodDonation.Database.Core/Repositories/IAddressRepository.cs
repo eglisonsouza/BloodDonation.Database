@@ -3,8 +3,7 @@ using BloodDonation.Database.Core.Repositories.Base;
 
 namespace BloodDonation.Database.Core.Repositories
 {
-    public interface IDonatorRepository : IAddRepository<Donator>, IGetByIdRepository<Donator>
+    public interface IAddressRepository : IAddRepository<Address>
     {
-        public Task<bool> EmailIsExist(string email);
     }
 }

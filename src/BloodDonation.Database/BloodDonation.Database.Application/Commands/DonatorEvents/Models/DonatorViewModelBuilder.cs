@@ -68,12 +68,6 @@ namespace BloodDonation.Database.Application.Commands.DonatorEvents.Models
             return this;
         }
 
-        public DonatorViewModelBuilder WithDonations(List<DonationViewModel> donations)
-        {
-            _donatorViewModel!.Donations = donations;
-            return this;
-        }
-
         public DonatorViewModelBuilder WithCreateAt(DateTime createAt)
         {
             _donatorViewModel!.CreateAt = createAt;

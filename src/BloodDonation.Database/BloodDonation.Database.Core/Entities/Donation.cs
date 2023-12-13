@@ -1,4 +1,5 @@
 ﻿using BloodDonation.Database.Core.Entities.Base;
+using BloodDonation.Database.Core.Enums;
 
 namespace BloodDonation.Database.Core.Entities
 {
@@ -7,7 +8,21 @@ namespace BloodDonation.Database.Core.Entities
         public Guid DonatorId { get; set; }
         public DateTime DonationDate { get; set; }
         public int QuantityMl { get; set; }
-        public Donator Donator { get; set; }
+        public Donator? Donator { get; set; }
 
+        public int LastDonation(DateTime nextDate)
+        {
+            return nextDate.Subtract(DonationDate).Days;
+        }
+
+        public int GetDonationInterval()
+        {
+            return Donator!.Gender.Equals(GenderType.Feminine) ? 90 : 60;
+        }
+
+        public static bool IsQuantityBloodRange(int quantityMl)
+        {
+            return quantityMl >= 450 && quantityMl <= 470;
+        }
     }
 }

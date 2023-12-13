@@ -6,9 +6,10 @@ using BloodDonation.Database.Core.Repositories;
 
 namespace BloodDonation.Database.Application.Commands.DonatorEvents.AddDonator
 {
-    public class AddDonatorHandler(IDonatorRepository donatorRepository) : IRequestHandler<AddDonatorCommand, DonatorViewModel>
+    public class AddDonatorHandler(IDonatorRepository donatorRepository, IAddressRepository addressRepository) : IRequestHandler<AddDonatorCommand, DonatorViewModel>
     {
         private readonly IDonatorRepository _donatorRepository = donatorRepository;
+        private readonly IAddressRepository _addressRepository = addressRepository;
 
         public async Task<DonatorViewModel> Handle(AddDonatorCommand request)
         {
@@ -21,7 +22,7 @@ namespace BloodDonation.Database.Application.Commands.DonatorEvents.AddDonator
 
             request.Addresses!.ForEach(async address =>
             {
-                await _donatorRepository.AddAddressAsync(address.ToEntity(donator.Id));
+                await _addressRepository.AddAsync(address.ToEntity(donator.Id));
             });
 
             return new DonatorViewModelBuilder()

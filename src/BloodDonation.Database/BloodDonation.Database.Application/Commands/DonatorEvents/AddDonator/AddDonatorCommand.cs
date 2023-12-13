@@ -14,7 +14,7 @@ namespace BloodDonation.Database.Application.Commands.DonatorEvents.AddDonator
         [Required(ErrorMessage = "BirthDate is required")]
         public DateTime BirthDate { get; set; }
         [Required(ErrorMessage = "Gender is required")]
-        public string? Gender { get; set; }
+        public GenderType Gender { get; set; }
         [Required(ErrorMessage = "Weight is required")]
         public double Weight { get; set; }
         [Required(ErrorMessage = "BloodType is required")]
@@ -28,7 +28,7 @@ namespace BloodDonation.Database.Application.Commands.DonatorEvents.AddDonator
                 name: Name!,
                 email: Email!,
                 birthDate: BirthDate,
-                gender: Gender!,
+                gender: Gender,
                 weight: Weight,
                 bloodType: BloodType,
                 rhFactor: RhFactor

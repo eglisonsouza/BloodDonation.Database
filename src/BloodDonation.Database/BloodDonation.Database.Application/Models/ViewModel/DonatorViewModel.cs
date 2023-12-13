@@ -1,5 +1,4 @@
-﻿using BloodDonation.Database.Core.Entities;
-using BloodDonation.Database.Core.Enums;
+﻿using BloodDonation.Database.Core.Enums;
 
 namespace BloodDonation.Database.Application.Models.ViewModel
 {
@@ -14,13 +13,7 @@ namespace BloodDonation.Database.Application.Models.ViewModel
         public BloodType BloodType { get; set; }
         public RhFactor RhFactor { get; set; }
         public List<AddressViewModel>? Addresses { get; set; }
-        public List<DonationViewModel>? Donations { get; set; }
         public DateTime CreateAt { get; set; }
         public DateTime? UpdateAt { get; set; }
-
-        public static DonatorViewModel FromEntity(Donator donator)
-        {
-            return new DonatorViewModel();
-        }
     }
 }
