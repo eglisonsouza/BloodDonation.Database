@@ -26,5 +26,10 @@ namespace BloodDonation.Database.Infrastructure.Persistence.Repositories
         {
             return _getByIdRepository.GetByIdAsync(id);
         }
+
+        public Task<Donator?> GetAllDonatiosByIdAsync(Guid id)
+        {
+            return _context.Donator.Include(d => d.Donations).FirstOrDefaultAsync(d => d.Id == id);
+        }
     }
 }

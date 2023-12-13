@@ -5,6 +5,7 @@ namespace BloodDonation.Database.Core.Repositories
 {
     public interface IDonatorRepository : IAddRepository<Donator>, IGetByIdRepository<Donator>
     {
-        public Task<bool> EmailIsExist(string email);
+        Task<bool> EmailIsExist(string email);
+        Task<Donator?> GetAllDonatiosByIdAsync(Guid id);
     }
 }
