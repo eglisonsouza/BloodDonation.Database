@@ -1,6 +1,6 @@
-﻿using BloodDonation.Database.Core.Entities.Base;
+﻿using BloodDonation.Database.Core.Models.Entities.Base;
 
-namespace BloodDonation.Database.Core.Entities
+namespace BloodDonation.Database.Core.Models.Entities
 {
     public class Address : BaseEntity
     {

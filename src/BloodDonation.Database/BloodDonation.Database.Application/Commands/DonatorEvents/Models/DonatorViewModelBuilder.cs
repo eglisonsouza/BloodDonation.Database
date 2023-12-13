@@ -1,6 +1,6 @@
 ﻿using BloodDonation.Database.Application.Models.ViewModel;
-using BloodDonation.Database.Core.Entities;
-using BloodDonation.Database.Core.Enums;
+using BloodDonation.Database.Core.Models.Entities;
+using BloodDonation.Database.Core.Models.Enums;
 
 namespace BloodDonation.Database.Application.Commands.DonatorEvents.Models
 {

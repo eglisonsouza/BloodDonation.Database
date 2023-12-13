@@ -1,4 +1,4 @@
-﻿using BloodDonation.Database.Core.Entities.Base;
+﻿using BloodDonation.Database.Core.Models.Entities.Base;
 using BloodDonation.Database.Core.Repositories.Base;
 using BloodDonation.Database.Infrastructure.Persistence.Configuration.SqlServer;
 using Microsoft.EntityFrameworkCore;

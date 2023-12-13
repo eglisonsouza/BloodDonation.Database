@@ -1,7 +1,7 @@
 ﻿using BloodDonation.Database.Application.Models.ViewModel;
 using BloodDonation.Database.Core.Common.Events;
-using BloodDonation.Database.Core.Entities;
 using BloodDonation.Database.Core.Exceptions;
+using BloodDonation.Database.Core.Models.Entities;
 using BloodDonation.Database.Core.Repositories;
 
 namespace BloodDonation.Database.Application.Commands.DonationEvents.AddDonation

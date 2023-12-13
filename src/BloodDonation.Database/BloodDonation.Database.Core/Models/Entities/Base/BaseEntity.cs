@@ -1,4 +1,4 @@
-﻿namespace BloodDonation.Database.Core.Entities.Base
+﻿namespace BloodDonation.Database.Core.Models.Entities.Base
 {
     public class BaseEntity
     {

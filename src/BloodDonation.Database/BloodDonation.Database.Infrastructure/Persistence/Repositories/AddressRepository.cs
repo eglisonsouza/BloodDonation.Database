@@ -1,4 +1,4 @@
-﻿using BloodDonation.Database.Core.Entities;
+﻿using BloodDonation.Database.Core.Models.Entities;
 using BloodDonation.Database.Core.Repositories;
 using BloodDonation.Database.Core.Repositories.Base;
 

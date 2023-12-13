@@ -1,4 +1,4 @@
-﻿using BloodDonation.Database.Core.Entities.Base;
+﻿using BloodDonation.Database.Core.Models.Entities.Base;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.Diagnostics.CodeAnalysis;

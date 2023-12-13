@@ -1,4 +1,4 @@
-﻿using BloodDonation.Database.Core.Entities;
+﻿using BloodDonation.Database.Core.Models.Entities;
 using System.ComponentModel.DataAnnotations;
 
 namespace BloodDonation.Database.Application.Commands.DonationEvents.AddDonation

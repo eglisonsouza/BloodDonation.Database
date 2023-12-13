@@ -1,4 +1,4 @@
-﻿using BloodDonation.Database.Core.Enums;
+﻿using BloodDonation.Database.Core.Models.Enums;
 
 namespace BloodDonation.Database.Application.Models.ViewModel
 {

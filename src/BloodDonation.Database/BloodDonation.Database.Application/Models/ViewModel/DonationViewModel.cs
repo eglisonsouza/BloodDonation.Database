@@ -1,4 +1,4 @@
-﻿using BloodDonation.Database.Core.Entities;
+﻿using BloodDonation.Database.Core.Models.Entities;
 
 namespace BloodDonation.Database.Application.Models.ViewModel
 {

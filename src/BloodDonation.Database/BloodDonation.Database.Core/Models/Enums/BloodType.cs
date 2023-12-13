@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace BloodDonation.Database.Core.Enums
+namespace BloodDonation.Database.Core.Models.Enums
 {
     public enum BloodType
     {

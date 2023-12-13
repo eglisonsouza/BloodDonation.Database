@@ -1,7 +1,7 @@
-﻿using BloodDonation.Database.Core.Entities.Base;
-using BloodDonation.Database.Core.Enums;
+﻿using BloodDonation.Database.Core.Models.Entities.Base;
+using BloodDonation.Database.Core.Models.Enums;
 
-namespace BloodDonation.Database.Core.Entities
+namespace BloodDonation.Database.Core.Models.Entities
 {
     public class BloodStock : BaseEntity
     {
