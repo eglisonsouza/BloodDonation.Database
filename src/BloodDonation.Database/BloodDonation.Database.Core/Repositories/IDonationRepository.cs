@@ -5,6 +5,6 @@ namespace BloodDonation.Database.Core.Repositories
 {
     public interface IDonationRepository : IAddRepository<Donation>
     {
-        Task<Donation> GetByDonatorIdAsync(Guid id);
+        Task<Donation?> GetLasDonationByIdDonator(Guid id);
     }
 }

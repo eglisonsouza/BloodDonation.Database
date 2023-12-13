@@ -26,9 +26,11 @@ namespace BloodDonation.Database.Infrastructure.Extensions
         {
             services.AddScoped(typeof(IAddRepository<>), typeof(AddRepository<>));
             services.AddScoped(typeof(IGetByIdRepository<>), typeof(GetByIdRepository<>));
+            services.AddScoped(typeof(IUpdateRepository<>), typeof(UpdateRepository<>));
             services.AddScoped<IDonatorRepository, DonatorRepository>();
             services.AddScoped<IDonationRepository, DonationRepository>();
             services.AddScoped<IAddressRepository, AddressRepository>();
+            services.AddScoped<IBloodStockRepository, BloodStockRepository>();
 
             return services;
         }

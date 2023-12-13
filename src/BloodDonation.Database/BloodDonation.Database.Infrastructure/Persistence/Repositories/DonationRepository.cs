@@ -15,9 +15,9 @@ namespace BloodDonation.Database.Infrastructure.Persistence.Repositories
             return _addRepository.AddAsync(entity);
         }
 
-        public Task<Donation> GetByDonatorIdAsync(Guid id)
+        public Task<Donation?> GetLasDonationByIdDonator(Guid idDonator)
         {
-            return _context.Donations.Include(d => d.Donator).Where(d => d.DonatorId == id).OrderBy(d => d.DonationDate).LastAsync();
+            return _context.Donations.Where(d => d!.DonatorId!.Equals(idDonator))!.OrderBy(d => d.DonationDate)!.LastAsync()!;
         }
     }
 }

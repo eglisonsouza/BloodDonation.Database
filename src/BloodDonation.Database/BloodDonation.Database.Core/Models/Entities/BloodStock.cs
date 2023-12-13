@@ -15,5 +15,11 @@ namespace BloodDonation.Database.Core.Models.Entities
             RhFactor = rhFactor;
             QuantityMl = quantityMl;
         }
+
+        public void UpdateStock(int quantityMl)
+        {
+            base.Updated();
+            QuantityMl += quantityMl;
+        }
     }
 }
