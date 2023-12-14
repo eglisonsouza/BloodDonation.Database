@@ -19,7 +19,7 @@ namespace BloodDonation.Database.UnitTest.Api.Controllers.V1
         public async Task CreateDonationAsync_ValidDonation_ReturnsOkObjectResult()
         {
             var donationViewModel = DonationViewModelMock.GetDonationViewModel();
-            var command = AddDonationCommandMock.GetAddDonationCommand();
+            var command = AddDonationCommandMock.GetAddDonationQuantityMLOutsideRangeCommand();
 
             // Arrange
             var handler = Substitute.For<IRequestHandler<AddDonationCommand, DonationViewModel>>();

@@ -3,9 +3,11 @@ using BloodDonation.Database.Core.Repositories;
 using BloodDonation.Database.Core.Repositories.Base;
 using BloodDonation.Database.Infrastructure.Persistence.Configuration.SqlServer;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BloodDonation.Database.Infrastructure.Persistence.Repositories
 {
+    [ExcludeFromCodeCoverage]
     public class DonatorRepository(IAddRepository<Donator> addRepository, IGetByIdRepository<Donator> getByIdRepository, SqlServerDbContext context) : IDonatorRepository
     {
         private readonly IAddRepository<Donator> _addRepository = addRepository;

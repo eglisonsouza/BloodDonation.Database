@@ -2,9 +2,11 @@
 using BloodDonation.Database.Core.Repositories.Base;
 using BloodDonation.Database.Infrastructure.Persistence.Configuration.SqlServer;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BloodDonation.Database.Infrastructure.Persistence.Repositories.Base
 {
+    [ExcludeFromCodeCoverage]
     public class AddRepository<TEntity> : IAddRepository<TEntity> where TEntity : BaseEntity
     {
         private readonly SqlServerDbContext _context;

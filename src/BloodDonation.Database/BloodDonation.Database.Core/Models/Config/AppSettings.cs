@@ -1,5 +1,9 @@
-﻿namespace BloodDonation.Database.Core.Models.Config
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace BloodDonation.Database.Core.Models.Config
 {
+
+    [ExcludeFromCodeCoverage]
     public class AppSettings
     {
         public const string Position = "Settings";
@@ -8,11 +12,13 @@
         public ExternalServices? ExternalServices { get; set; }
     }
 
+    [ExcludeFromCodeCoverage]
     public class ExternalServices
     {
         public string? ViaCep { get; set; }
     }
 
+    [ExcludeFromCodeCoverage]
     public class RabbitMqSettings
     {
         public string? Uri { get; set; }
@@ -21,6 +27,7 @@
         public string? Password { get; set; }
     }
 
+    [ExcludeFromCodeCoverage]
     public class ConnectionStrings
     {
         public string? SqlServerConnection { get; set; }

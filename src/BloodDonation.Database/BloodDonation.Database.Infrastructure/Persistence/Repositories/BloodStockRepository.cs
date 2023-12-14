@@ -4,9 +4,11 @@ using BloodDonation.Database.Core.Repositories;
 using BloodDonation.Database.Core.Repositories.Base;
 using BloodDonation.Database.Infrastructure.Persistence.Configuration.SqlServer;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BloodDonation.Database.Infrastructure.Persistence.Repositories
 {
+    [ExcludeFromCodeCoverage]
     public class BloodStockRepository(SqlServerDbContext context, IUpdateRepository<BloodStock> updateRepository, IAddRepository<BloodStock> addRepository) : IBloodStockRepository
     {
         private readonly IUpdateRepository<BloodStock> _updateRepository = updateRepository;
