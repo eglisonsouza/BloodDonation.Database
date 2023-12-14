@@ -1,6 +1,7 @@
 ﻿using BloodDonation.Database.Application.Query.ZipCodeEvent.FindByZipCode;
 using BloodDonation.Database.Core.Services;
 using BloodDonation.Database.UnitTest.Mock;
+using BloodDonation.Database.UnitTest.Mock.Query;
 using NSubstitute;
 using System.Text.Json;
 

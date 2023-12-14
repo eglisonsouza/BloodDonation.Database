@@ -2,7 +2,8 @@
 using BloodDonation.Database.Application.Models.ViewModel;
 using BloodDonation.Database.Application.Query.ZipCodeEvent.FindByZipCode;
 using BloodDonation.Database.Core.Common.Events;
-using BloodDonation.Database.UnitTest.Mock;
+using BloodDonation.Database.UnitTest.Mock.Query;
+using BloodDonation.Database.UnitTest.Mock.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using NSubstitute;
 using System.Text.Json;

@@ -1,9 +1,11 @@
 ﻿using BloodDonation.Database.Application.Models.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BloodDonation.Database.Api.Filters
 {
+    [ExcludeFromCodeCoverage]
     public class ExceptionDefaultFilter : ExceptionFilterAttribute
     {
         private readonly ErrorViewModel _error;

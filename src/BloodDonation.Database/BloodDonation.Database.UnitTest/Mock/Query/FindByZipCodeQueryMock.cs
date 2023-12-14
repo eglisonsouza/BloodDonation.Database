@@ -1,6 +1,6 @@
 ﻿using BloodDonation.Database.Application.Query.ZipCodeEvent.FindByZipCode;
 
-namespace BloodDonation.Database.UnitTest.Mock
+namespace BloodDonation.Database.UnitTest.Mock.Query
 {
     public class FindByZipCodeQueryMock
     {

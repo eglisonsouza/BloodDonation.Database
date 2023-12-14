@@ -1,6 +1,6 @@
 ﻿using BloodDonation.Database.Application.Models.ViewModel;
 
-namespace BloodDonation.Database.UnitTest.Mock
+namespace BloodDonation.Database.UnitTest.Mock.ViewModel
 {
     public class ZipCodeViewModelMock
     {

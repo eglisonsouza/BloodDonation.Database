@@ -38,7 +38,7 @@ namespace BloodDonation.Database.Application.Commands.DonatorEvents.Models
             return this;
         }
 
-        public DonatorViewModelBuilder WithGender(string gender)
+        public DonatorViewModelBuilder WithGender(GenderType gender)
         {
             _donatorViewModel!.Gender = gender;
             return this;

@@ -8,6 +8,7 @@ namespace BloodDonation.Database.Application.Models.ViewModel
         public string Street { get; set; }
         public string Number { get; set; }
         public string City { get; set; }
+        public string State { get; set; }
         public string ZipCode { get; set; }
         public string Zone { get; set; }
         public DateTime CreatedAt { get; set; }
@@ -26,6 +27,7 @@ namespace BloodDonation.Database.Application.Models.ViewModel
                 Street = address.Street,
                 Number = address.Number,
                 City = address.City,
+                State = address.State,
                 ZipCode = address.ZipCode,
                 Zone = address.Zone,
                 CreatedAt = address.CreatedAt,
