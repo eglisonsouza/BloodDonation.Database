@@ -29,7 +29,7 @@ namespace BloodDonation.Database.Application.Commands.DonationEvents.AddDonation
 
         private void Validate()
         {
-            if (QuantityMl >= 450 && QuantityMl <= 470)
+            if (QuantityMl < 450 || QuantityMl > 470)
                 throw new Exception("Quantity is not in range");
         }
     }
