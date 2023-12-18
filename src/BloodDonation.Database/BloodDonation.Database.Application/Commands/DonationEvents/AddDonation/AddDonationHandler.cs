@@ -15,9 +15,9 @@ namespace BloodDonation.Database.Application.Commands.DonationEvents.AddDonation
         private readonly IDonatorRepository _donatorRepository = donatorRepository;
         private readonly IDonationRepository _donationRepository = donationRepository;
         private readonly IRequestHandler<UpdateBloodStockCommand, BloodStockViewModel> _updateBloodStockHandler = updateBloodStockHandler;
+
         public async Task<DonationViewModel> Handle(AddDonationCommand request)
         {
-
             var donator = await _donatorRepository.GetByIdAsync(request.DonatorId)!
                 ?? throw new DonatorNotFoundException();
 
@@ -25,18 +25,13 @@ namespace BloodDonation.Database.Application.Commands.DonationEvents.AddDonation
 
             var lastDonation = await GetLastDonation(request.DonatorId);
 
-            if (lastDonation is not null)
-                ValidateEligibity(lastDonation, request);
-
-            if (!Donation.IsQuantityBloodRange(request.QuantityMl))
-                throw new Exception("Quantity is not in range");
+            lastDonation?.ValidateInterval(request.DonationDate);
 
             var entity = await _donationRepository.AddAsync(request.ToEntity());
 
             var bloodStock = await UpdateBloodStockAsync(entity);
 
             return DonationViewModel.FromEntity(entity, bloodStock);
-
         }
 
         private async Task<Donation?> GetLastDonation(Guid idDonator)
@@ -58,12 +53,6 @@ namespace BloodDonation.Database.Application.Commands.DonationEvents.AddDonation
 
             if (donator.IsWeightOutsideMinimumFromDonation())
                 throw new Exception("Donator is not heavy enough to donate blood");
-        }
-
-        private static void ValidateEligibity(Donation donation, AddDonationCommand request)
-        {
-            if (donation.LastDonation(request.DonationDate) < donation.GetDonationInterval())
-                throw new Exception("Donator outside the minimum date range for donation");
         }
 
         private async Task<BloodStockViewModel> UpdateBloodStockAsync(Donation entity)

@@ -17,12 +17,20 @@ namespace BloodDonation.Database.Application.Commands.DonationEvents.AddDonation
 
         public Donation ToEntity()
         {
+            Validate();
+
             return new Donation()
             {
                 DonatorId = DonatorId,
                 DonationDate = DonationDate,
                 QuantityMl = QuantityMl
             };
+        }
+
+        private void Validate()
+        {
+            if (QuantityMl >= 450 && QuantityMl <= 470)
+                throw new Exception("Quantity is not in range");
         }
     }
 }

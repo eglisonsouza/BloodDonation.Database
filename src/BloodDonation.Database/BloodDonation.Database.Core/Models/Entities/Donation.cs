@@ -5,24 +5,27 @@ namespace BloodDonation.Database.Core.Models.Entities
 {
     public class Donation : BaseEntity
     {
+        private const int IntervalMinimunMasculine = 90;
+        private const int IntervalMinimunFeminine = 60;
+
         public Guid DonatorId { get; set; }
         public DateTime DonationDate { get; set; }
         public int QuantityMl { get; set; }
         public Donator? Donator { get; set; }
 
-        public int LastDonation(DateTime nextDate)
+        private int LastDonation(DateTime nextDate) => nextDate.Subtract(DonationDate).Days;
+
+        private bool LastDonationOutDate(DateTime donationDate) => LastDonation(donationDate) < GetDonationInterval();
+
+        private int GetDonationInterval()
         {
-            return nextDate.Subtract(DonationDate).Days;
+            return Donator!.Gender.Equals(GenderType.Feminine) ? IntervalMinimunMasculine : IntervalMinimunFeminine;
         }
 
-        public int GetDonationInterval()
+        public void ValidateInterval(DateTime donationDate)
         {
-            return Donator!.Gender.Equals(GenderType.Feminine) ? 90 : 60;
-        }
-
-        public static bool IsQuantityBloodRange(int quantityMl)
-        {
-            return quantityMl >= 450 && quantityMl <= 470;
+            if (LastDonationOutDate(donationDate))
+                throw new Exception("Donator outside the minimum date range for donation");
         }
     }
 }
