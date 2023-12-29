@@ -6,30 +6,26 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSingleton(builder.Configuration.GetSection("Settings").Get<AppSettings>()!);
-
-builder.Services.AddServiceCollection();
-builder.Services.AddQueries();
-builder.Services.AddCommands();
-builder.Services.AddConsulConfiguration(builder.Configuration);
-builder.Services.AddControllers(
-    options => options.Filters.Add(typeof(ExceptionDefaultFilter)
+builder.Services.AddSingleton(builder.Configuration.GetSection("Settings").Get<AppSettings>()!)
+    .AddServiceCollection()
+    .AddQueries()
+    .AddCommands()
+    .AddConsulConfiguration(builder.Configuration)
+    .AddContextSqlServer(builder.Configuration)
+    .AddRepositories()
+    .AddEndpointsApiExplorer()
+    .AddSwaggerGen()
+    .AddControllers(
+        options => options.Filters.Add(typeof(ExceptionDefaultFilter)
     )).AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
-builder.Services.AddContextSqlServer(builder.Configuration);
-builder.Services.AddRepositories();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseSwagger();
-app.UseSwaggerUI();
-
-app.UseHttpsRedirection();
-
-app.UseConsul(builder.Configuration);
-
-app.UseAuthorization();
+app.UseSwagger()
+    .UseSwaggerUI()
+    .UseHttpsRedirection()
+    .UseConsul(builder.Configuration)
+    .UseAuthorization();
 
 app.MapControllers();
 
