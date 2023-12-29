@@ -10,9 +10,10 @@ builder.Services.AddSingleton(builder.Configuration.GetSection("Settings").Get<A
 
 builder.Services.AddServiceCollection();
 builder.Services.AddQueries();
+builder.Services.AddCommands();
+builder.Services.AddConsulConfiguration(builder.Configuration);
 builder.Services.AddControllers(
     options => options.Filters.Add(typeof(ExceptionDefaultFilter)
-    
     )).AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 builder.Services.AddContextSqlServer(builder.Configuration);
 builder.Services.AddRepositories();
@@ -25,6 +26,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
+
+app.UseConsul(builder.Configuration);
 
 app.UseAuthorization();
 
