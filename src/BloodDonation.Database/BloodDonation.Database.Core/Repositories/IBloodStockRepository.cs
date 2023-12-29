@@ -7,5 +7,6 @@ namespace BloodDonation.Database.Core.Repositories
     public interface IBloodStockRepository : IUpdateRepository<BloodStock>, IAddRepository<BloodStock>
     {
         Task<BloodStock> GetByBloodTypeAndRhFactorAsync(BloodType bloodType, RhFactor rhFactor);
+        Task<List<BloodStock>> GetAllByQuantityMl(int quantityMl);
     }
 }

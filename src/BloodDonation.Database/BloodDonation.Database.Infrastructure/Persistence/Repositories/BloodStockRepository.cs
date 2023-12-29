@@ -29,5 +29,10 @@ namespace BloodDonation.Database.Infrastructure.Persistence.Repositories
         {
             return _updateRepository.Update(entity);
         }
+
+        public Task<List<BloodStock>> GetAllByQuantityMl(int quantityMl)
+        {
+            return _context.BloodStocks.Where(b => b.QuantityMl <= quantityMl).ToListAsync();
+        }
     }
 }
