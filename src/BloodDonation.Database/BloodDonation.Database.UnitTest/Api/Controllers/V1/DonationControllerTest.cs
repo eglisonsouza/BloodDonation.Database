@@ -2,7 +2,6 @@
 using BloodDonation.Database.Application.Commands.DonationEvents.AddDonation;
 using BloodDonation.Database.Application.Models.ViewModel;
 using BloodDonation.Database.Application.Query.DonationEvents.FindDonationsByIdDonator;
-using BloodDonation.Database.Application.Query.DonationEvents.Models;
 using BloodDonation.Database.Core.Common.Events;
 using BloodDonation.Database.UnitTest.Mock;
 using BloodDonation.Database.UnitTest.Mock.Query;

@@ -1,4 +1,4 @@
-﻿using BloodDonation.Database.Application.Query.DonationEvents.Models;
+﻿using BloodDonation.Database.Application.Models.ViewModel;
 
 namespace BloodDonation.Database.UnitTest.Mock.ViewModel
 {

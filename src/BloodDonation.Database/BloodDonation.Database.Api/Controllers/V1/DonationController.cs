@@ -2,7 +2,6 @@
 using BloodDonation.Database.Application.Models.ViewModel;
 using BloodDonation.Database.Application.Query.DonationEvents.FindDonationsByIdDonator;
 using BloodDonation.Database.Application.Query.DonationEvents.GetHistoryDonation;
-using BloodDonation.Database.Application.Query.DonationEvents.Models;
 using BloodDonation.Database.Core.Common.Events;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,4 +1,4 @@
-﻿using BloodDonation.Database.Application.Query.DonationEvents.Models;
+﻿using BloodDonation.Database.Application.Models.ViewModel;
 using BloodDonation.Database.Core.Common.Events;
 using BloodDonation.Database.Core.Repositories;
 

@@ -1,6 +1,6 @@
 ﻿using BloodDonation.Database.Core.Models.Entities;
 
-namespace BloodDonation.Database.Application.Query.DonationEvents.Models
+namespace BloodDonation.Database.Application.Models.ViewModel
 {
     public class DonatorWithDonationsViewModel
     {
