@@ -24,5 +24,10 @@ namespace BloodDonation.Database.Application.Models.ViewModel
                 UpdatedAt = bloodStock.UpdatedAt
             };
         }
+
+        public static List<BloodStockViewModel> FromEntity(List<BloodStock> bloodStock)
+        {
+            return bloodStock.Select(FromEntity).ToList();
+        }
     }
 }
