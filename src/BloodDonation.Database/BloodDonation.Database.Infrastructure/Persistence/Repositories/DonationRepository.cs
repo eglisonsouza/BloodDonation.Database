@@ -26,7 +26,7 @@ namespace BloodDonation.Database.Infrastructure.Persistence.Repositories
         public Task<List<Donation?>> GetHistory(DateTime startDate, DateTime endDate)
         {
             return _context.Donations
-                .Where(d => d.DonationDate>=startDate && d.DonationDate <= endDate)
+                .Where(d => d.DonationDate >= startDate && d.DonationDate <= endDate)
                 .Include(d => d.Donator)
                 .OrderBy(d => d.DonationDate)
                 .ToListAsync()!;

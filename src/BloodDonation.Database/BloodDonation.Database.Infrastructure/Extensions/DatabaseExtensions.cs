@@ -1,8 +1,10 @@
 ﻿using BloodDonation.Database.Core.Repositories;
 using BloodDonation.Database.Core.Repositories.Base;
+using BloodDonation.Database.Core.Repositories.Proxy;
 using BloodDonation.Database.Infrastructure.Persistence.Configuration.SqlServer;
 using BloodDonation.Database.Infrastructure.Persistence.Repositories;
 using BloodDonation.Database.Infrastructure.Persistence.Repositories.Base;
+using BloodDonation.Database.Infrastructure.Persistence.Repositories.Proxy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,6 +33,7 @@ namespace BloodDonation.Database.Infrastructure.Extensions
             services.AddScoped<IDonationRepository, DonationRepository>();
             services.AddScoped<IAddressRepository, AddressRepository>();
             services.AddScoped<IBloodStockRepository, BloodStockRepository>();
+            services.AddScoped<IHistoryDonationProxy, HistoryDonationProxy>();
 
             return services;
         }

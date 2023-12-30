@@ -1,5 +1,4 @@
 ﻿using BloodDonation.Database.Application.Commands.DonationEvents.AddDonation;
-using BloodDonation.Database.Application.Commands.DonatorEvents.AddDonator;
 using BloodDonation.Database.Application.Models.ViewModel;
 using BloodDonation.Database.Application.Query.DonationEvents.FindDonationsByIdDonator;
 using BloodDonation.Database.Application.Query.DonationEvents.GetHistoryDonation;
