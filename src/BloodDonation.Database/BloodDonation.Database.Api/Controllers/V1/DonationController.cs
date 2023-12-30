@@ -1,6 +1,8 @@
 ﻿using BloodDonation.Database.Application.Commands.DonationEvents.AddDonation;
+using BloodDonation.Database.Application.Commands.DonatorEvents.AddDonator;
 using BloodDonation.Database.Application.Models.ViewModel;
 using BloodDonation.Database.Application.Query.DonationEvents.FindDonationsByIdDonator;
+using BloodDonation.Database.Application.Query.DonationEvents.GetHistoryDonation;
 using BloodDonation.Database.Application.Query.DonationEvents.Models;
 using BloodDonation.Database.Core.Common.Events;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +26,15 @@ namespace BloodDonation.Database.Api.Controllers.V1
         public async Task<IActionResult> GetDonationsByIdDonatorAsync(
             [FromServices] IRequestHandler<FindDonationsByIdDonatorQuery, DonatorWithDonationsViewModel> handler,
             [FromQuery] FindDonationsByIdDonatorQuery query
+        )
+        {
+            return Ok(await handler.Handle(query));
+        }
+
+        [HttpGet("history")]
+        public async Task<IActionResult> GetHistoryAsync(
+            [FromServices] IRequestHandler<GetHistoryDonationQuery, List<HistoryDonationViewModels>> handler,
+            [FromQuery] GetHistoryDonationQuery query
         )
         {
             return Ok(await handler.Handle(query));

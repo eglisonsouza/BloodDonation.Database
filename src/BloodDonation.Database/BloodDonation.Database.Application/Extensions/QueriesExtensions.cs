@@ -1,4 +1,5 @@
 ﻿using BloodDonation.Database.Application.Models.ViewModel;
+using BloodDonation.Database.Application.Query.DonationEvents.GetHistoryDonation;
 using BloodDonation.Database.Application.Query.StockEvents.GetLowStock;
 using BloodDonation.Database.Application.Query.ZipCodeEvent.FindByZipCode;
 using BloodDonation.Database.Core.Common.Events;
@@ -14,6 +15,7 @@ namespace BloodDonation.Database.Application.Extensions
         {
             services.AddTransient<IRequestHandler<FindByZipCodeQuery, ZipCodeViewModel>, FindByZipCodeHandler>();
             services.AddTransient<IRequestHandler<GetLowStockQuery, List<BloodStockViewModel>>, GetLowStockHandler>();
+            services.AddTransient<IRequestHandler<GetHistoryDonationQuery, List<HistoryDonationViewModels>>, GetHistoryDonationHandler>();
             return services;
         }
     }

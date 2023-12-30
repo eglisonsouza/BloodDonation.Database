@@ -6,5 +6,6 @@ namespace BloodDonation.Database.Core.Repositories
     public interface IDonationRepository : IAddRepository<Donation>
     {
         Task<Donation?> GetLasDonationByIdDonator(Guid id);
+        Task<List<Donation?>> GetHistory(DateTime startDate, DateTime endDate);
     }
 }
